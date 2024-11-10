@@ -1,0 +1,20 @@
+#filesbar-container{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+    border: 0.1rem solid black;
+}
+
+.file-panel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#dots-image{
+    width: 1rem;
+    height: 1rem;
+}
