@@ -1,0 +1,30 @@
+#output{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#output-tooltip{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+#output-tooltip li{
+    list-style-type: none;
+}
+
+.active{
+    border-bottom: 0.1rem solid rgb(53, 147, 255);
+}
+
+#output-results{
+    padding: 0 1rem;
+}
+
+.result-row{
+    list-style-type: none;
+    text-align: left;
+}

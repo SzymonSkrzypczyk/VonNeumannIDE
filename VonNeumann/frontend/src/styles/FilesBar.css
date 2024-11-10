@@ -1,10 +1,12 @@
 #filesbar-container{
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     align-items: center;
-    gap: 1rem;
-    padding: 0 2rem;
-    border: 0.1rem solid black;
+    gap: 0.1rem;
+    border: 0.1rem solid rgb(27, 27, 27);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(46, 46, 46) transparent;
 }
 
 .file-panel{
@@ -12,9 +14,18 @@
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+    border: 0.1rem solid rgb(27, 27, 27);
+    padding: 0 1rem;
+    height: 2.5rem;
 }
 
 #dots-image{
     width: 1rem;
     height: 1rem;
+}
+
+#add-button{
+    width: 2rem;
+    height: 2rem;
+    padding-left: 0.1rem;
 }
