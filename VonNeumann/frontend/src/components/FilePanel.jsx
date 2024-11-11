@@ -36,6 +36,11 @@ export default function FilePanel({
   };
 
   const handleRenameSubmit = () => {
+    if (newName.trim() === "") {
+      setNewName(file.name);
+      setIsRenaming(true);
+      return;
+    }
     handleOptionClick("Rename", file.id, newName);
     setIsRenaming(false);
   };

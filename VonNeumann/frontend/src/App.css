@@ -57,3 +57,35 @@
     border: none;
     background-color: rgba(255, 255, 255, 1);
 }
+
+html, body, #root, #App {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#App > * {
+    flex-shrink: 0;
+}
+
+#App {
+    display: flex;
+    flex-direction: column;
+}
+
+#App .editor-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.monaco-editor {
+    height: 100%;
+}
+
+#App .output-container {
+    flex: 1;
+    overflow-y: auto;
+}
