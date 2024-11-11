@@ -19,6 +19,12 @@
     height: 2.5rem;
 }
 
+.fade{
+    animation-name: fade-click;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+
 #dots-image{
     width: 1rem;
     height: 1rem;
@@ -28,4 +34,43 @@
     width: 2rem;
     height: 2rem;
     padding-left: 0.1rem;
+}
+
+@keyframes fade-click {
+    from{
+        opacity: 1;
+    }
+
+    25%, 75%{
+        opacity: 0.75;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.floating-options-list {
+    position: fixed;
+    background-color: #1f1f1f;
+    border: 1px solid #252525;
+    border-radius: 5px;
+    list-style: none;
+    padding: 5px;
+    width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.floating-options-list li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.floating-options-list li:hover {
+    background-color: #3a3a3a;
 }
