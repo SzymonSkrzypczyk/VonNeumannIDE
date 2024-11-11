@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/FilesBar.css";
+import "../styles/FilePanel.css";
 import dotsImage from "../assets/images/dots.png";
 
 export default function FilePanel({
@@ -9,7 +10,8 @@ export default function FilePanel({
   activeFileOptionsId,
   setActiveFileOptionsId,
   handleOptionClick,
-  menuPosition,
+  setMenuPosition,
+  menuPosition
 }) {
   const [isRenaming, setIsRenaming] = useState(false);
   const [newName, setNewName] = useState(file.name);
@@ -25,7 +27,7 @@ export default function FilePanel({
     const { clientX, clientY } = event;
     setActiveFileOptionsId(activeFileOptionsId === file.id ? null : file.id); // Toggle options visibility
     // Update position for options menu
-    menuPosition({ x: clientX, y: clientY });
+    setMenuPosition({ x: clientX, y: clientY });
   };
 
   // Handle renaming the file
@@ -47,10 +49,11 @@ export default function FilePanel({
       {isRenaming ? (
         <input
           type="text"
+          id="rename-input"
           value={newName}
           onChange={handleRenameChange}
-          onBlur={handleRenameSubmit} // Submit rename on blur (when input loses focus)
-          onKeyPress={(e) => {
+          onBlur={handleRenameSubmit}
+          onKeyDown={(e) => {
             if (e.key === "Enter") {
               handleRenameSubmit(); // Submit rename on Enter key
             }

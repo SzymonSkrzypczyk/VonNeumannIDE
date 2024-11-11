@@ -41,7 +41,7 @@ export default function FilesBar({ files, updateFiles }) {
 
   // Add a new file
   const addFile = () => {
-    const newFile = { id: uuidv4(), name: "newName" };
+    const newFile = { id: uuidv4(), name: "untitled" };
     updateFiles([...files, newFile]);
     setFade(true);
   };
@@ -57,7 +57,8 @@ export default function FilesBar({ files, updateFiles }) {
           activeFileOptionsId={activeFileOptionsId}
           setActiveFileOptionsId={setActiveFileOptionsId}
           handleOptionClick={handleOptionClick}
-          menuPosition={setMenuPosition}
+          setMenuPosition={setMenuPosition}
+          menuPosition={menuPosition}
         />
       ))}
       <img

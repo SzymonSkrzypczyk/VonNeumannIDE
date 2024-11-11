@@ -1,7 +1,9 @@
 #output{
     display: flex;
     flex-direction: column;
-    
+    border: 0.1rem solid rgb(12, 12, 12);
+    background-color: rgb(22, 22, 22);
+    height: 100%;
 }
 
 #output-tooltip{
@@ -22,6 +24,7 @@
 
 #output-results{
     padding: 0 1rem;
+    height: 100vh;
 }
 
 .result-row{

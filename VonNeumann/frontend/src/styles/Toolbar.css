@@ -25,6 +25,13 @@
     animation-duration: 0.2s;
 }
 
+.clicked-saved{
+    opacity: 0.4;
+    animation-name: save;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+}
+
 #logo{
     width: 4rem;
     height: 4rem;
@@ -45,4 +52,23 @@
     to{
         opacity: 0.4;
     }
+}
+
+@keyframes save {
+    from{
+        opacity: 1;
+    }
+
+    25%, 75%{
+        opacity: 0.75;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
 }

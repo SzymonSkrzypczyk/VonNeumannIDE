@@ -8,6 +8,7 @@ import saveIcon from "../assets/images/save.png";
 export default function Toolbar(){
     const [playing, setPlaying] = useState(false);
     const [stopped, setStopped] = useState(false);
+    const [save, setSave] = useState(false);
 
     const playClicked = (e) => {
         if (stopped){
@@ -26,7 +27,7 @@ export default function Toolbar(){
     }
 
     const saveClicked = (e) => {
-        console.log("Save clicked");
+        setSave(true);
     }
     /*<img id="logo" src={logo} />*/
     return (
@@ -36,7 +37,7 @@ export default function Toolbar(){
             <div id="toolbar-icons">
                 <img id="play-button" src={playIcon} className={`toolbar-image ${playing == true? "clicked": ""}`} onClick={playClicked}></img>
                 <img id="stop-button" src={stopIcon} className={`toolbar-image ${stopped == true? "clicked": ""}`} onClick={stopClicked}></img>
-                <img id="save-button" src={saveIcon} className="toolbar-image" onClick={saveClicked}></img>
+                <img id="save-button" src={saveIcon} className={`toolbar-image ${save == true? "clicked-saved": ""}`} onClick={saveClicked} onAnimationEnd={() => setSave(false)}></img>
             </div>
         </nav>
     )
